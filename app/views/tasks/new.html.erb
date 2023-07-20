@@ -1,8 +1,14 @@
 <div class="container">
 	<h1>タスクの編集</h1>
 	<%= form_with model: @task, local:true do |form| %>
-		<%= form.label :title %>
-		<%= form.text_field :title, placeholder: "タスクを入力する" %>
+    <div>
+      <%= form.label :title %>
+      <%= form.text_field :title, placeholder: "タスクを入力する" %>
+    </div>
+    <div>
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </div>
 		<input type="submit" value="保存する">
 		<% end %>
 		<%= link_to '一覧に戻る', tasks_path, class: "back" %>
